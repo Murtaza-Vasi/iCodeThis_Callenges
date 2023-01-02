@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--heading-font-size: 2rem;
+	--sub-heading-font-size: 1.5rem;
+	--sub-sub-heading-font-size: 1.2rem;
+	--text-font-size: 0.8rem;
+	--header-bottom-color: #d0d5e4;
+	--button-background-color: #0e1731;
+}
+
+body {
+	font-family: "Poppins";
+}
+
+header {
+	padding: 2rem;
+	width: 100%;
+	border-bottom: 1px solid var(--header-bottom-color);
+}
+
+nav > ul,
+.secondary-nav > ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+.secondary-nav .search-icon {
+	cursor: pointer;
+}
+
+a {
+	margin-right: 1.5rem;
+	cursor: pointer;
+}
+
+.item-list,
+.secondary-item-list {
+	display: flex;
+}
+
+.action-buttons {
+	display: flex;
+}
+
+.action-buttons a {
+	border: 1px solid var(--button-background-color);
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+}
+
+.get-started-btn {
+	background-color: var(--button-background-color);
+	color: #fff;
+}
+
+.get-started-btn:hover {
+	background-color: #fff;
+	color: var(--button-background-color);
+}
+
+main {
+	padding: 1.5rem 2rem;
+	width: 100%;
+}
+
+section {
+	display: flex;
+	padding: 1.5rem 0;
+}
+
+/* Main Container CSS */
+
+.container {
+	width: 50%;
+	margin-right: 1rem;
+}
+
+.container h1 {
+	font-size: var(--heading-font-size);
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.container > img {
+	width: 80%;
+	height: 50%;
+	border-radius: 0.5rem;
+}
+
+.container h3 {
+	font-size: var(--sub-heading-font-size);
+	margin: 1rem 0;
+}
+
+.container p {
+	font-size: var(--text-font-size);
+	max-width: 400px;
+}
+
+/* Profile Card CSS */
+
+.profile-container {
+	margin-top: 1.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.profile-container > img {
+	width: 50px;
+	border-radius: 100%;
+}
+
+.profile-container > p {
+	font-size: var(--text-font-size);
+	margin-left: 1rem;
+}
+
+.side-container {
+	margin: 1rem;
+	width: 50%;
+}
+
+.side-container > h4 {
+	font-size: var(--sub-sub-heading-font-size);
+	margin: 1rem 0;
+}
+
+.article-container {
+	display: flex;
+	margin: 1.5rem 0;
+}
+
+.article-container > img {
+	width: 100%;
+	max-width: 150px;
+}
+
+.article-description {
+	margin-left: 1rem;
+}
