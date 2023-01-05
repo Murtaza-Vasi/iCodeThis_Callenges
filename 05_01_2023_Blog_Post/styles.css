@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins";
+	width: 100vw;
+	height: 100vh;
+}
+
+:root {
+	--heading-font-size: 2rem;
+	--heading-font-color: #3e80b0;
+	--blog-font-color: #395b70;
+	--sub-heading-font-size: 0.8rem;
+	--content-font-size: 0.9rem;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	margin: auto 0;
+	background-image: linear-gradient(45deg, white 50%, #37b2b0 50%);
+}
+
+.container {
+	display: flex;
+	width: 60%;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+
+.img-container {
+	position: relative;
+}
+
+.img-container > span {
+	opacity: 0.6;
+	background-color: #c1d3dd;
+	padding: 5px 10px;
+	color: #fff;
+	position: absolute;
+	top: 1.5rem;
+	left: 1.5rem;
+}
+
+.img-container > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.blog-container {
+	position: relative;
+	padding: 2rem 3rem 2rem 2rem;
+}
+
+.title-container {
+	height: 50%;
+	position: relative;
+	color: var(--heading-font-color);
+}
+
+.title-container > span {
+	color: #c1d3dd;
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+}
+
+.title-container > h1 {
+	font-size: var(--heading-font-size);
+	letter-spacing: 0.05rem;
+	width: 80%;
+	font-family: "Merriweather";
+	font-weight: 900;
+}
+
+.title-container > p {
+	margin: 0.5rem 0;
+	font-size: var(--sub-heading-font-size);
+}
+
+.content {
+	height: 50%;
+	position: relative;
+	font-size: var(--content-font-size);
+	color: var(--blog-font-color);
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.content::before {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(transparent 70%, white);
+}
+
+@media (min-width: 960px) and (max-width: 1200px) {
+	:root {
+		--heading-font-size: 1.8rem;
+	}
+
+	.container {
+		width: 90%;
+	}
+
+	.title-container {
+		height: fit-content;
+		margin-bottom: 1rem;
+	}
+}
+
+@media (min-width: 360px) and (max-width: 960px) {
+	:root {
+		--heading-font-size: 1.2rem;
+	}
+
+	.container {
+		flex-wrap: wrap;
+	}
+
+	.blog-container {
+		flex-grow: 1;
+		padding: 1rem;
+	}
+
+	.title-container {
+		height: fit-content;
+		margin-bottom: 1rem;
+	}
+
+	.content {
+		height: 25%;
+	}
+
+	.content::before {
+		position: absolute;
+		content: "";
+		height: 100%;
+		width: 100%;
+		background-image: linear-gradient(transparent 70%, white);
+	}
+}
