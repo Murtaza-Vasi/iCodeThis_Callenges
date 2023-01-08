@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins";
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--background-color);
+}
+
+:root {
+	--background-color: #f5f8fa;
+	--btn-background-color: #1f2229;
+	--blue-font-color: #1d6dda;
+	--text-font-size: 0.8rem;
+}
+
+main {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.container {
+	background-color: #fff;
+	padding: 4rem;
+	max-width: 60%;
+	box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title-container .category {
+	color: var(--blue-font-color);
+	cursor: pointer;
+}
+
+.card-header .imdb-container > span {
+	color: var(--blue-font-color);
+}
+
+.imdb-container {
+	color: lightslategray;
+	font-size: var(--text-font-size);
+}
+
+.card-body {
+	margin: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.img-container {
+	height: 100%;
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+}
+
+.card-body > .img-container > img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.price-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.price-container {
+	width: 100%;
+	font-weight: bold;
+	margin-top: 1rem;
+}
+
+.price-container > button {
+	padding: 0.2rem 1rem;
+	border-radius: 1.5rem;
+	background-color: white;
+	border: 2px solid var(--btn-background-color);
+	cursor: pointer;
+}
+
+.price-container > button:hover {
+	background-color: var(--btn-background-color);
+	color: white;
+}
+
+.content {
+	width: 75%;
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.content > p {
+	margin: 1rem 0;
+	font-size: var(--text-font-size);
+}
+
+.cast-info {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.actors,
+.director,
+.producers,
+.screenwriter {
+	align-self: start;
+}
+.actors {
+	grid-row: span 2;
+}
+
+.card-body ul {
+	list-style-type: none;
+	margin-bottom: 1rem;
+}
+.card-body ul li {
+	cursor: pointer;
+	color: var(--blue-font-color);
+	font-size: var(--text-font-size);
+}
+
+.content > button {
+	margin-top: 1rem;
+	cursor: pointer;
+	padding: 0.2rem 1rem;
+	background-color: var(--btn-background-color);
+	border-radius: 1.5rem;
+	color: #fff;
+	border: 2px solid var(--btn-background-color);
+	align-self: flex-end;
+}
+
+.content > button:hover {
+	background-color: white;
+	color: var(--btn-background-color);
+}
+
+@media (max-width: 960px) {
+	.container {
+		padding: 1.5rem;
+	}
+
+	.card-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.card-body {
+		flex-direction: column;
+	}
+
+	.card-body > .img-container {
+		width: 70%;
+		margin-bottom: 1rem;
+	}
+
+	.card-body > .content {
+		width: 100%;
+	}
+
+	.card-body > .content {
+		margin: 0;
+	}
+
+	.card-body > .img-container > img {
+		margin: 1rem 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.card-body > .img-container > img {
+		margin: 0;
+	}
+
+	.cast-info {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
