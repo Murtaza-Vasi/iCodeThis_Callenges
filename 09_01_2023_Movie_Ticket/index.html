@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template file</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<main>
+			<div class="card">
+				<div class="card-header">
+					<div class="prev">
+						<i class="fa fa-arrow-left" aria-hidden="true"></i>
+					</div>
+					<figure>
+						<img
+							src="https://cdn1.edgedatg.com/aws/v2/abc/GuardiansoftheGalaxyVol2/showimages/2ff1265d9b80d5136a17ec68aac00852/1600x900-Q90_2ff1265d9b80d5136a17ec68aac00852.jpg"
+							alt="guardians of the galaxy vol 2"
+						/>
+
+						<figcaption>
+							<h3>Guardians of the Galaxy Vol 2</h3>
+							<p>
+								<i class="fa fa-map-marker" aria-hidden="true"></i> Cineplex
+								Entertainment, Torronto ON
+							</p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="card-body">
+					<div class="seat-availability-container">
+						<div class="seat-container">
+							<img src="armchair.svg" alt="armchair" class=".available" />
+							<span>Available</span>
+						</div>
+						<div class="seat-container">
+							<img src="armchair.svg" alt="armchair" class="booked" />
+							<span>Booked</span>
+						</div>
+						<div class="seat-container">
+							<img src="armchair.svg" alt="armchair" class="selected" />
+							<span>Selected</span>
+						</div>
+					</div>
+					<div class="seat-selection">
+						<!-- Seats rendered through JavaScript -->
+					</div>
+					<div class="screen">
+						<!-- Screen -->
+					</div>
+				</div>
+				<div class="card-footer">
+					<div class="title">
+						<p>Date</p>
+						<p>Tickets</p>
+						<p>Total</p>
+					</div>
+					<div class="values-container">
+						<div class="values">
+							<p class="time">Jul 11, 19:15</p>
+							<p class="no-of-ticket">3</p>
+							<p class="total-amount">$31</p>
+						</div>
+						<button>Next</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="index.js"></script>
+	</body>
+</html>

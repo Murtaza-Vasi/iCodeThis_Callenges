@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	font-family: "Roboto", sans-serif;
+}
+
+:root {
+	--background-color: #e9f2ef;
+	--card-body-background-color: #f9fafc;
+	--booked-seat-background-color: #c9d8df;
+	--available-seat-background-color: #5b889d;
+	--footer-center-background-color: #ec407a;
+	--footer-start-background-color: #db3769;
+}
+
+main {
+	background-color: var(--background-color);
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.card {
+	background-color: var(--card-body-background-color);
+	max-width: 400px;
+	border-radius: 1rem;
+}
+
+.card-header {
+	position: relative;
+}
+
+.card-header > .prev {
+	top: 1rem;
+	left: 1.5rem;
+	position: absolute;
+	color: #fff;
+	font-size: 2rem;
+	z-index: 100;
+}
+.card-header > figure {
+	position: relative;
+}
+
+.card-header > figure > figcaption {
+	color: white;
+	position: absolute;
+	bottom: 1rem;
+	left: 1.5rem;
+}
+
+figcaption > h3 {
+	font-size: 1.2rem;
+	letter-spacing: 0.05rem;
+}
+
+figcaption > p {
+	font-size: 0.8rem;
+}
+
+.card-header > figure > img {
+	width: 100%;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	object-fit: cover;
+}
+
+.card-body {
+	padding: 1rem;
+	width: 100%;
+}
+
+.seat-selection {
+	margin: 1rem 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+	gap: 0.3rem;
+}
+
+.seat {
+	cursor: pointer;
+	width: 25px;
+}
+
+.seat.available {
+	color: var(--available-seat-background-color);
+}
+
+.row-index {
+	grid-column: 1;
+}
+
+.seat-availability-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.seat-container {
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+	gap: 0.5rem;
+}
+
+.seat-container > img {
+	width: 15px;
+}
+
+.seat-container > span {
+	font-size: 0.7rem;
+}
+
+.card-footer {
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-footer > .title {
+	padding: 1rem;
+	flex-grow: 1;
+	background-color: var(--footer-start-background-color);
+}
+
+.card-footer > .values-container {
+	padding: 1rem;
+	flex-grow: 4;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--footer-center-background-color);
+}
+
+.values-container > button {
+	background-color: #fff;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	border: none;
+	cursor: pointer;
+}
