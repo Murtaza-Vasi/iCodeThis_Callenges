@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins";
+	width: 100vw;
+	height: 100vh;
+}
+
+:root {
+	--background-color: #17213f;
+	--card-background-color: #0f162b;
+	--card-border-radius: 0.5rem;
+	--card-name-fs: 1rem;
+	--card-designation-fs: 0.8rem;
+	--card-previously-fs: 0.7rem;
+
+	--card-name-color: #d6ddf1;
+	--card-color: #8d98ba;
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+	background-color: var(--background-color);
+	display: grid;
+	place-items: center;
+	gap: 1rem;
+}
+
+.wrapper {
+	width: 80%;
+	place-items: center;
+	gap: 1rem;
+	justify-content: center;
+	grid-auto-rows: 1fr;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+	border-radius: var(--card-border-radius);
+	background-color: var(--card-background-color);
+	color: #fff;
+	align-self: center;
+}
+
+.card-img {
+	width: 100%;
+	height: 30%;
+}
+
+.card-img > img {
+	object-fit: cover;
+	border-top-left-radius: var(--card-border-radius);
+	border-top-right-radius: var(--card-border-radius);
+	/* height: 100%; */
+	width: 100%;
+}
+
+.card-body {
+	padding: 1rem;
+}
+
+.card-body > .name {
+	font-size: var(--card-name-fs);
+	color: var(--card-name-color);
+}
+
+.card-body > .designation {
+	font-size: var(--card-designation-fs);
+	margin-bottom: 0.5rem;
+	color: var(--card-color);
+}
+
+.card-body > .previously {
+	margin-bottom: 0.5rem;
+	color: var(--card-color);
+	font-size: var(--card-previously-fs);
+}
+
+.card-body > img {
+	width: 25%;
+}
+
+.new-card {
+	align-self: stretch;
+	justify-self: stretch;
+	border: 5px solid var(--card-background-color);
+}
+
+.add-btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	height: 100%;
+	color: var(--card-color);
+	cursor: pointer;
+}
+
+.add-btn > button {
+	outline: none;
+	border: none;
+	color: inherit;
+	background-color: transparent;
+}
+
+@media (max-width: 530px) {
+	.container {
+		height: auto;
+	}
+}
